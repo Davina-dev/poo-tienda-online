@@ -58,6 +58,16 @@ private val productosEnStock: MutableList<Producto> = mutableListOf<Producto>(
        throw IllegalArgumentException ("Referencia no encontrada en DataStock")
     }
 
+    override fun traerProductosPorPrecio(precio:Double): MutableList<Producto>{
+        val listarProductosPrecio : MutableList<Producto> = mutableListOf()
+        for (producto in productosEnStock){
+            if(producto.precioProducto <= precio){
+                listarProductosPrecio.add(producto)
+                return listarProductosPrecio
+            }
+        }
+        throw IllegalArgumentException ("precio no encontrado en DataStock")
+    }
 }
 
 

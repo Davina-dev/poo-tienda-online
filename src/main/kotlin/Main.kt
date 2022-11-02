@@ -12,15 +12,21 @@ fun main(args: Array<String>) {
     val pantallaTienda: PantallaTienda = PantallaTienda(formatoStock, listarProductos, buscarProductos)
 
 
+
+
+
     // funcionalidad 1: Mostrar catálogo
        pantallaTienda.mostrarCatalogo()
 
     //funcionalidad 2 : Ver Detalles Del Producto
-       val referenciaProducto = pantallaTienda.preguntarReferencia()
+    val referenciaProducto = pantallaTienda.preguntarReferencia()
         pantallaTienda.mostrarProductodetallado(referenciaProducto)
         pantallaTienda.siguientepasoBuscaReferencia()
 
-    //
+    // funcionalidad 3: filtrar por precio
+    val precioProducto = pantallaTienda.preguntarPrecio()
+        pantallaTienda.mostrarProducto(precioProducto)
+        pantallaTienda.siguientepasoBuscaPrecio()
 
 }
 

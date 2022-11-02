@@ -7,4 +7,6 @@ interface RepositorioProductos {
 
     fun traerProductosPorReferencia (referencia: String): MutableList<Producto>
 
+    fun traerProductosPorPrecio(precio:Double): MutableList<Producto>
+
 }

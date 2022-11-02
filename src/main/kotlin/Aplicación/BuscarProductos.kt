@@ -11,11 +11,11 @@ class BuscarProductos( val repoProductos:RepositorioProductos) {
   }
 
 
-/*
-    fun buscarPorPrecio (precio:Double):List<Producto>{
-        return productos.filter { it.precioProducto <= precio}
-    }
 
- */
+   fun buscarPorPrecio (precio:Double):List<Producto>{
+      return repoProductos.traerProductosPorPrecio(precio)
+   }
+
+
 
 }
